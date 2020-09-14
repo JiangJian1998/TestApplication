@@ -14,16 +14,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        release {
-            storeFile file("my-release-key.jks")
-            storePassword "123456"
-            keyAlias "my-alias"
-            keyPassword "123456"
-        }
-    }
-
-
     lintOptions {
         abortOnError false
     }
@@ -32,7 +22,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
 }
